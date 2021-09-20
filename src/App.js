@@ -2,9 +2,9 @@ import Estudios from "./Apartados/Estudios.js";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Carreralaboral from "./Apartados/Carreralaboral.js";
 import Presentacion from "./Apartados/Presentación.js";
-import { FaTwitter, FaLinkedinIn } from "react-icons/fa";
+import { FaTwitter, FaLinkedinIn, FaPhoneAlt } from "react-icons/fa";
 import { FiMail } from "react-icons/fi";
-import { BsPhone } from "react-icons/bs";
+import { MdMail } from "react-icons/md";
 
 function App() {
     return (
@@ -59,7 +59,7 @@ function App() {
                     <footer className="row pieweb">
                         <div className="col-3  mail">
                             <a href="mailto: i.elgstrom@gmail.com">
-                                <FiMail className="iconopie" />
+                                <MdMail className="iconopie" />
                             </a>
                             <small className="desaparecer">
                                 i.elgstrom@gmail.com
@@ -67,15 +67,20 @@ function App() {
                         </div>
                         <div className="col-3 telefono">
                             <a href="tel:671408611">
-                                <BsPhone className="iconopie" />
+                                <FaPhoneAlt className="iconopie" />
                             </a>
                             <small className="desaparecer">+34 671408611</small>
                         </div>
                         <div className="col-3 linkedin">
-                            <FaLinkedinIn className="iconopie" />
+                            <a href="https://linkedin.com/in/ignasi-elgström">
+                                {" "}
+                                <FaLinkedinIn className="iconopie" />
+                            </a>
                         </div>
                         <div className="col-3 twitter">
-                            <FaTwitter className="iconopie" />
+                            <a href="https://twitter.com/IgnasiElgstrom?s=09">
+                                <FaTwitter className="iconopie" />
+                            </a>
                         </div>
                     </footer>
                 </div>
