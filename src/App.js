@@ -14,7 +14,7 @@ function App() {
                 <div className="container-fluid estructuraContenido">
                     <div className="row justify-content-between cont_central">
                         <Router>
-                            <div className="col-3 p-4 menu_botones">
+                            <div className="col-md-3 col-12 p-4 menu_botones">
                                 <Link
                                     className="btn_menu"
                                     to="/presentacion"
@@ -43,7 +43,7 @@ function App() {
                                     Información complementaria
                                 </li>
                             </div>
-                            <div className="col-8 contenido">
+                            <div className="col-md-8 col-12 contenido">
                                 <Route path="/estudios">
                                     <Estudios />
                                 </Route>
@@ -57,17 +57,19 @@ function App() {
                         </Router>
                     </div>
                     <footer className="row pieweb">
-                        <div className="col-3 mail">
+                        <div className="col-3  mail">
                             <a href="mailto: i.elgstrom@gmail.com">
                                 <FiMail className="iconopie" />
-                            </a>{" "}
-                            i.elgstrom@gmail.com
+                            </a>
+                            <small className="desaparecer">
+                                i.elgstrom@gmail.com
+                            </small>
                         </div>
                         <div className="col-3 telefono">
                             <a href="tel:671408611">
                                 <BsPhone className="iconopie" />
-                            </a>{" "}
-                            +34 671408611
+                            </a>
+                            <small className="desaparecer">+34 671408611</small>
                         </div>
                         <div className="col-3 linkedin">
                             <FaLinkedinIn className="iconopie" />
