@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Carreralaboral from "./Apartados/Carreralaboral.js";
 import Presentacion from "./Apartados/Presentación.js";
 import { FaTwitter, FaLinkedinIn, FaPhoneAlt } from "react-icons/fa";
-import { FiMail } from "react-icons/fi";
+
 import { MdMail } from "react-icons/md";
 
 function App() {
