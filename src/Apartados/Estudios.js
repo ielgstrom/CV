@@ -1,4 +1,4 @@
 export const Estudios = () => {
-    return <div>Estudios</div>;
+    return <div className="interiorContenido">Estudios</div>;
 };
 export default Estudios;

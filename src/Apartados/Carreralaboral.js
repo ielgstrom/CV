@@ -1,4 +1,4 @@
 export const Carreralaboral = () => {
-    return <div>Carrera</div>;
+    return <div className="interiorContenido">Carrera</div>;
 };
 export default Carreralaboral;

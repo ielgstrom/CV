@@ -37,10 +37,10 @@ function App() {
                                 onClick={clickMenu}
                                 className="dropbtn btn btn-light "
                             >
-                                {!verDropDown && (
+                                {verDropDown && (
                                     <FaBars className="iconoDropdown" />
                                 )}
-                                {verDropDown && (
+                                {!verDropDown && (
                                     <FaTimes className="iconoDropdown" />
                                 )}
                             </button>
