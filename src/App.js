@@ -2,11 +2,22 @@ import Estudios from "./Apartados/Estudios.js";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Carreralaboral from "./Apartados/Carreralaboral.js";
 import Presentacion from "./Apartados/Presentación.js";
-import { FaTwitter, FaLinkedinIn, FaPhoneAlt } from "react-icons/fa";
+import {
+    FaTwitter,
+    FaLinkedinIn,
+    FaPhoneAlt,
+    FaBars,
+    FaTimes,
+} from "react-icons/fa";
 
 import { MdMail } from "react-icons/md";
+import { useState } from "react";
 
 function App() {
+    const [verDropDown, setVerDropDown] = useState(false);
+    const clickMenu = () => {
+        setVerDropDown(!verDropDown);
+    };
     return (
         <>
             <div className="contenedorGeneral">
@@ -14,35 +25,51 @@ function App() {
                 <div className="container-fluid estructuraContenido">
                     <div className="row justify-content-between cont_central">
                         <Router>
-                            <div className="col-md-3 col-12 p-4 menu_botones">
-                                <Link
-                                    className="btn_menu"
-                                    to="/presentacion"
-                                    type="button"
-                                >
-                                    Presentación
-                                </Link>
+                            <button
+                                onClick={clickMenu}
+                                className="dropbtn btn btn-light "
+                            >
+                                {!verDropDown && (
+                                    <FaBars className="iconoDropdown" />
+                                )}
+                                {verDropDown && (
+                                    <FaTimes className="iconoDropdown" />
+                                )}
+                            </button>
+                            {verDropDown && (
+                                <div className="col-md-3 col-12 p-4 menu_botones">
+                                    <Link
+                                        onClick={clickMenu}
+                                        className="btn_menu"
+                                        to="/presentacion"
+                                        type="button"
+                                    >
+                                        Presentación
+                                    </Link>
 
-                                <Link
-                                    type="button"
-                                    to="/estudios"
-                                    className="btn_menu"
-                                >
-                                    Estudios
-                                </Link>
+                                    <Link
+                                        onClick={clickMenu}
+                                        type="button"
+                                        to="/estudios"
+                                        className="btn_menu"
+                                    >
+                                        Estudios
+                                    </Link>
 
-                                <Link
-                                    type="button"
-                                    to="/carreralaboral"
-                                    className="btn_menu"
-                                >
-                                    Carrera Laboral
-                                </Link>
+                                    <Link
+                                        onClick={clickMenu}
+                                        type="button"
+                                        to="/carreralaboral"
+                                        className="btn_menu"
+                                    >
+                                        Carrera Laboral
+                                    </Link>
 
-                                <li className="btn_menu">
-                                    Información complementaria
-                                </li>
-                            </div>
+                                    <li className="btn_menu">
+                                        Información complementaria
+                                    </li>
+                                </div>
+                            )}
                             <div className="col-md-8 col-12 contenido">
                                 <Route path="/estudios">
                                     <Estudios />

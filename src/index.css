@@ -7,14 +7,13 @@
 }
 .contenido {
     background-color: rgba(171, 171, 255, 0.59);
-    margin-right: 10px;
+    padding-left: 0;
     border-radius: 10px;
     height: 100%;
     padding-right: 0;
 }
 .cont_central {
     height: 90%;
-    padding: 30px;
 }
 .btn_menu {
     border: solid;
@@ -91,6 +90,20 @@ body {
     color: #292929;
 }
 
+.dropbtn {
+    border-radius: 20px;
+    height: 35px;
+    background-color: rgba(255, 0, 0, 0.59);
+    color: white;
+}
+.dropbtn:visited {
+    background-color: rgba(255, 0, 0, 0.59);
+    color: white;
+}
+.iconoDropdown {
+    font-size: larger;
+}
+
 @media (max-width: 767px) {
     .desaparecer {
         display: none;
@@ -98,6 +111,10 @@ body {
     .pieweb {
         font-size: 40px;
         padding-top: 0px;
+        padding-left: 0;
+    }
+    .cont_central {
+        padding: 10px;
     }
     .mail,
     .telefono,
@@ -107,11 +124,19 @@ body {
     }
     .menu_botones {
         height: 40%;
+        margin-top: 35px;
+        position: absolute;
+        width: 95%;
+        z-index: 1;
+        background-color: rgba(255, 0, 0, 0.878);
     }
     .contenido {
-        height: 60%;
+        height: 90%;
     }
     .App {
         font-size: 25px;
+    }
+    .iconopie {
+        width: 24px;
     }
 }
