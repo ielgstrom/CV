@@ -95,6 +95,7 @@ body {
     height: 35px;
     background-color: rgba(255, 0, 0, 0.59);
     color: white;
+    display: none;
 }
 .dropbtn:visited {
     background-color: rgba(255, 0, 0, 0.59);
@@ -105,6 +106,13 @@ body {
 }
 
 @media (max-width: 767px) {
+    .dropbtn {
+        display: block;
+        position: relative;
+        left: 90%;
+        bottom: 45px;
+        margin-top: 5px;
+    }
     .desaparecer {
         display: none;
     }
@@ -123,18 +131,22 @@ body {
         padding-left: 10%;
     }
     .menu_botones {
-        height: 40%;
-        margin-top: 35px;
+        height: 230px;
+        margin-top: 0;
         position: absolute;
-        width: 95%;
+        width: 97%;
+
         z-index: 1;
         background-color: rgba(255, 0, 0, 0.878);
     }
     .contenido {
-        height: 90%;
+        height: 100%;
+        bottom: 40px;
     }
     .App {
+        padding-left: 10px;
         font-size: 25px;
+        display: inline-block;
     }
     .iconopie {
         width: 24px;

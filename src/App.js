@@ -11,12 +11,20 @@ import {
 } from "react-icons/fa";
 
 import { MdMail } from "react-icons/md";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function App() {
-    const [verDropDown, setVerDropDown] = useState(false);
+    const [verDropDown, setVerDropDown] = useState(true);
+    useEffect(() => {
+        if (window.innerWidth >= 767) {
+            setVerDropDown(true);
+            console.log("joer");
+        }
+    }, []);
     const clickMenu = () => {
-        setVerDropDown(!verDropDown);
+        if (window.innerWidth <= 767) {
+            setVerDropDown(!verDropDown);
+        }
     };
     return (
         <>
